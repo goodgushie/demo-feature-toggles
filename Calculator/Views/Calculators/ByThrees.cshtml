@@ -1,0 +1,33 @@
+﻿@using Calculator.Helpers
+
+@{
+    ViewBag.Title = "Calculate By Threes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calculate By Threes</h2>
+
+<div>
+    <input type="number" id="inputPlus" />
+    <input type="button" value="+ 3" class="button__operation" data-operation="plus" data-input-a="inputPlus" />
+</div>
+
+<div>
+    <input type="number" id="inputMinus" />
+    <input type="button" value="- 3" class="button__operation" data-operation="minus" data-input-a="inputMinus" />
+</div>
+
+<div>
+    <input type="number" id="inputMultipy" />
+    <input type="button" value="* 3" class="button__operation" data-operation="multiply" data-input-a="inputMultipy" />
+</div>
+
+<div>
+    <input type="number" id="inputDivide" />
+    <input type="button" value="/ 3" class="button__operation" data-operation="divide" data-input-a="inputDivide" />
+</div>
+
+<div @(!FeaturesHelper.IsEnabled(1) ? "hidden=\"hidden\"" : "")>
+    <input type="number" id="inputModulo" />
+    <input type="button" value="% 3" class="button__operation" data-operation="modulo" data-input-a="inputModulo" />
+</div>

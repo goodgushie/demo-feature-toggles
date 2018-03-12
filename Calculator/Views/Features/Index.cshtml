@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Features</h2>
+
+<span class="span__features">
+    @Html.Action("FeaturesList", "Features")
+</span>

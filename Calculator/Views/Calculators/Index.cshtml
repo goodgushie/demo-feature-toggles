@@ -1,0 +1,28 @@
+﻿@using Calculator.Helpers
+
+@{
+    ViewBag.Title = "Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Calculator</h2>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <input type="number" id="inputA" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <input type="button" value="+" class="button__operation" data-operation="plus" data-input-a="inputA" data-input-b="inputB" />
+        <input type="button" value="-" class="button__operation" data-operation="minus" data-input-a="inputA" data-input-b="inputB" />
+        <input type="button" value="*" class="button__operation" data-operation="multiply" data-input-a="inputA" data-input-b="inputB" />
+        <input type="button" value="/" class="button__operation" data-operation="divide" data-input-a="inputA" data-input-b="inputB" />
+        <input type="button" value="%" class="button__operation" data-operation="modulo" data-input-a="inputA" data-input-b="inputB" @(!FeaturesHelper.IsEnabled(1) ? "hidden=\"hidden\"" : "") />
+    </div>
+    <div class="col-md-4">
+        <input type="number" id="inputB" />
+    </div>
+</div>

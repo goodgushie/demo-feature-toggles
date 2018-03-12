@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Calculator.Models.FeatureDto>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsEnabled)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @if (item.IsEnabled)
+            {
+                <span style="color: green">On</span>
+            }
+            else
+            {
+                <span style="color: red">Off</span>
+            }
+        </td>
+        <td>
+            <input type="button" class="button__toggle" value="Toggle" data-id="@item.Id"/>
+        </td>
+    </tr>
+}
+
+</table>
