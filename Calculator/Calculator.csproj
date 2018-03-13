@@ -171,6 +171,7 @@
     <Content Include="Views\Features\FeaturesList.cshtml" />
     <Content Include="Views\Calculators\ByThrees.cshtml" />
     <Content Include="Views\Calculators\RandomGenerator.cshtml" />
+    <Content Include="Views\Calculators\Timezones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
